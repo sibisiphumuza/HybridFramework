@@ -1,26 +1,14 @@
 package functionalityTestcases;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
 import base.TestBase;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import utilities.ExcelFileReader;
 import utilities.ReadExcelFile;
 import utilities.ReadObject;
 import utilities.UIOperation;
@@ -45,7 +33,7 @@ public class RegisterFunctionalityTestExecution extends TestBase {
 
 		// Read keyword sheet
 		Sheet sheet = file.readExcel(System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\",
-				"templatetestexecution.xlsx", "VerifyRegisterUserValidTest");
+				"TestExecution.xlsx", "VerifyRegisterUserValidTest");
 		// Find number of rows in excel file
 		int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
 		object = new Object[rowCount][5];

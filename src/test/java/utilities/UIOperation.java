@@ -13,27 +13,30 @@ public class UIOperation {
 	}
 	public void perform(Properties p,String operation,String objectName,String objectType,String value) throws Exception{
 		System.out.println("");
-		switch (operation.toUpperCase()) {
-		case "CLICK":
-			//Perform click
-			driver.findElement(this.getObject(p,objectName,objectType)).click();
-			break;
-		case "SETTEXT":
-			//Set text on control
-			driver.findElement(this.getObject(p,objectName,objectType)).sendKeys(value);
-			break;
-			
-		case "GOTOURL":
-			//Get url of application
-			driver.get(p.getProperty(value));
-			break;
-		case "GETTEXT":
-			//Get text of an element
-			driver.findElement(this.getObject(p,objectName,objectType)).getText();
-			break;
+		if(operation != null) {			
+			switch (operation.toUpperCase()) {
+			case "CLICK":
+				//Perform click
+				driver.findElement(this.getObject(p,objectName,objectType)).click();
+				break;
+			case "SETTEXT":
+				//Set text on control
+				driver.findElement(this.getObject(p,objectName,objectType)).sendKeys(value);
+				break;
+				
+			case "GOTOURL":
+				//Get url of application
+				driver.get(p.getProperty(value));
+				break;
+			case "GETTEXT":
+				//Get text of an element
+				driver.findElement(this.getObject(p,objectName,objectType)).getText();
+				break;
 
-		default:
-			break;
+			default:
+				break;
+			}
+			
 		}
 	}
 	
