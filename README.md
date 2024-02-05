@@ -1,4 +1,4 @@
-# Keyword-Driven & Data-Driven Hybrid Framework.
+# Data-Driven Hybrid Framework.
 
 <Version 2.0>
 
