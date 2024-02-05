@@ -1,0 +1,4 @@
+﻿testid,testcase,description,execute
+TC-001,navigateToHomepage,Verify navigation to test object home page.,TRUE
+TC-002,navigateToUserSignupPage,Verify navigation to user account register.,TRUE
+TC-003,registerNewUser,Verify new user registration valid test.,TRUE
