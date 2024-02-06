@@ -22,7 +22,7 @@ public class DriverBase implements Driver {
      
     public void start(String browser) { 
     	driver = BrowserFactory.getDriverManager(browser).initDriver();
-    	wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+    	wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void quit() {

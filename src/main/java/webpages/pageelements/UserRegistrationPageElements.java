@@ -35,6 +35,4 @@ public class UserRegistrationPageElements {
 	public By getBtnCreateAnAccount() {
 		return btnCreateAnAccount;
 	}
-	
-	
 }

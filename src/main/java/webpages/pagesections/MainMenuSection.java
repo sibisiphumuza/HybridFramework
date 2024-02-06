@@ -6,7 +6,5 @@ public class MainMenuSection {
 	
 	public MainMenuSectionElements elements() {
 		return new MainMenuSectionElements();
-	}
-
-	
+	}	
 }
